@@ -15,6 +15,7 @@ helper do
     uri = URI("http://www.meteoprog.ua/data/weather/informer/#{URI.escape(self.location)}.js" \
               "?dt=#{Date.today}")
     http = Net::HTTP.new(uri.host, 80)
+    http.read_timeout = 500
     request = Net::HTTP::Get.new(uri.request_uri)
     self.result  = JSON.parse(http.request(request).body)
     self.data = "#{self.result[self.lang] || self.location}: #{self.result['now_temp']}°C"
