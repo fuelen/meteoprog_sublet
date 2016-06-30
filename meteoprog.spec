@@ -25,22 +25,22 @@ NOTES
   # Sublet config
   s.config = [
     {
-      name: 'interval',
-      type: 'integer',
-      description: 'interval',
-      def_value: '1800'
+      :name        => 'interval',
+      :type        => 'integer',
+      :description => 'interval',
+      :def_value   => '1800'
     },
     {
-      name: 'location',
-      type: 'string',
-      description: 'Enter your location. For details - sur notes meteoprog',
-      def_value: 'Lviv'
+      :name        => 'location',
+      :type        => 'string',
+      :description => 'Enter your location. For details - sur notes meteoprog',
+      :def_value   => 'Lviv'
     },
     {
-      name: 'lang',
-      type: 'string',
-      description: 'Language for city indicator (en, ua, ru, pl)',
-      def_value: 'en'
+      :name        => 'lang',
+      :type        => 'string',
+      :description => 'Language for city indicator (en, ua, ru, pl)',
+      :def_value   => 'en'
     }
   ]
 end
